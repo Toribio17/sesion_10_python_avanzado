@@ -1,0 +1,12 @@
+Flask
+ibm_cloud_sdk_core
+python-dotenv
+gunicorn
+multiprocess
+Pillow
+pytesseract
+pdf2image
+flask-jwt-extended
+flask-cors
+python-dotenv
+pymongo
