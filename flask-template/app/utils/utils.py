@@ -23,6 +23,7 @@ class Utils:
         path_file = os.path.join(path_folder,file)
         is_exist = os.path.exists(path_file)
 
+        print("Path: ", path_folder)
         return is_exist
     
     def get_document_type(self,file_name):

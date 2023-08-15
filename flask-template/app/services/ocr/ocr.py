@@ -28,11 +28,11 @@ class Ocr_Process(Utils):
                     print("File processing: ", file_name)
                     type_file_result = ".txt"
                     is_file_exist_txt = self.files_exist(file_name + type_file_result, path_results_txt)
-                    if is_file_exist_txt:
+                    if is_file_exist_txt == False:
                         entire_path = os.path.join(os.environ["GENERAL_PATH"],os.environ["FILES_INPUT_PATH"])
                         pages = convert_from_path(entire_path + "/" + file_name,dpi=300,last_page=50,thread_count=5)
                         text = []
-                        for img_blob in enumerate(pages):
+                        for page_num,img_blob in enumerate(pages):
                             text.append(
                                 pytesseract.image_to_string(img_blob, lang="eng")
                             )
