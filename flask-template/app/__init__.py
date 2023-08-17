@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 app.register_blueprint(ocr_class)
-app.register_blueprint(people_blueprint)
+#app.register_blueprint(people_blueprint)
 
 #declarar variable de entorno
 ENV = dotenv_values(".env")
